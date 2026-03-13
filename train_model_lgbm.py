@@ -360,6 +360,7 @@ for dam, dam_id in zip(name, id_list):
     pmp_model = lgb.train(
         final_params,
         train_data,
+        fobjective=custom_obj,
         num_boost_round=1000,
         valid_sets=[train_data, test_data],
         callbacks=[
@@ -594,4 +595,5 @@ for dam, dam_id in zip(name, id_list):
     plt.savefig(rf'pic\{str(dam)}_reservoir_analysis.png', dpi=150, bbox_inches='tight')
     plt.show()
     plt.close()
+
 # %%

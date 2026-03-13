@@ -269,7 +269,7 @@ for dam, dam_id in zip(name, id_list):
     
     missing = [col for col in required_cols if col not in df_all.columns]
     if missing:
-        print(f"Warning: ไม่มี columns: {missing}")
+        print(f"Warning: No columns: {missing}")
         continue
     
     df = df_all[required_cols].dropna().reset_index(drop=True)
@@ -597,3 +597,4 @@ for dam, dam_id in zip(name, id_list):
     plt.close()
 
 # %%
+
